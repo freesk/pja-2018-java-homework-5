@@ -1,0 +1,28 @@
+Train {
+	isArticulated: true;
+	isLowFloor: true;
+	nameOfTheProducer: Honda;
+	dateOfManufactureInMs: 1524421034587;
+	mileage: 99999;
+}
+
+Bus {
+	isArticulated: true;
+	fuelType: 2;
+	isLowFloor: false;
+	nameOfTheProducer: Mercedes-Benz;
+	dateOfManufactureInMs: 1524507434587;
+	engineCapacity: 3000;
+	mileage: 151515;
+}
+
+Bus {
+	isArticulated: true;
+	fuelType: 2;
+	isLowFloor: false;
+	nameOfTheProducer: Mercedes-Benz;
+	dateOfManufactureInMs: 1524421034587;
+	engineCapacity: 3000;
+	mileage: 151515;
+}
+
