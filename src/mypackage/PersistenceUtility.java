@@ -98,6 +98,9 @@ public class PersistenceUtility {
 			
 			String identifier = "";
 			
+			final int MAX_COUNT = 100;
+			int count = 0;
+			
 			// next till it hits the end of the file
 			while (tokenizer.nextToken() != StreamTokenizer.TT_EOF) {
 				
@@ -118,7 +121,7 @@ public class PersistenceUtility {
 					if (tokenizer.nextToken() != TT_OPENING_BRACKET)
 						throw new IOException("[Error] invalid data file format");
 					
-					while (tokenizer.nextToken() != TT_CLOSING_BRACKET) {
+					while (tokenizer.nextToken() != TT_CLOSING_BRACKET && (++count) < MAX_COUNT) {
 						String key = tokenizer.sval;
 //						System.out.println("Key: " + tokenizer.sval);
 						

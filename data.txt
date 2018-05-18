@@ -2,7 +2,7 @@ Train {
 	isArticulated: true;
 	isLowFloor: true;
 	nameOfTheProducer: Honda;
-	dateOfManufactureInMs: 1524334634587;
+	dateOfManufactureInMs: 1524248234587;
 	mileage: 99999;
 }
 
@@ -32,6 +32,16 @@ Bus {
 	isLowFloor: false;
 	nameOfTheProducer: Mercedes-Benz;
 	dateOfManufactureInMs: 1524161834587;
+	engineCapacity: 3000;
+	mileage: 151515;
+}
+
+Bus {
+	isArticulated: true;
+	fuelType: 2;
+	isLowFloor: false;
+	nameOfTheProducer: Mercedes-Benz;
+	dateOfManufactureInMs: 1524075434587;
 	engineCapacity: 3000;
 	mileage: 151515;
 }
