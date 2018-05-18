@@ -116,7 +116,7 @@ public class PersistenceUtility {
 					
 					// it must hit an opening bracket next
 					if (tokenizer.nextToken() != TT_OPENING_BRACKET)
-						throw new IOException("[Error] invalid data file format. Check line " + tokenizer.lineno());
+						throw new IOException("[Error] invalid data file format");
 					
 					while (tokenizer.nextToken() != TT_CLOSING_BRACKET) {
 						String key = tokenizer.sval;
@@ -125,7 +125,7 @@ public class PersistenceUtility {
 						// make sure : is there
 						tokenizer.nextToken();
 						if (tokenizer.ttype != TT_COLUMN) 
-							throw new IOException("[Error] invalid data file format. Check line " + tokenizer.lineno());
+							throw new IOException("[Error] invalid data file format");
 						// value can be both a number or a string
 						tokenizer.nextToken();
 						
@@ -135,7 +135,7 @@ public class PersistenceUtility {
 						// make sure ; is there
 						tokenizer.nextToken();
 						if (tokenizer.ttype != TT_SEMICOLON) 
-							throw new IOException("[Error] invalid data file format. Check line " + tokenizer.lineno());
+							throw new IOException("[Error] invalid data file format");
 						
 						bar.put(key, sval);
 					}

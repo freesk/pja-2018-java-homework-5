@@ -16,10 +16,10 @@ import junit.framework.Assert;
 @SuppressWarnings("deprecation")
 public class ScopeTest {
 	
-	ArrayList<Map<String, Map<String, String>>> collection = null;
-	Map<String, Map<String, String>> foo = null;
-	Map<String, String> bar = null;
-	Vehicle vehicle = null;
+	private ArrayList<Map<String, Map<String, String>>> collection = null;
+	private Map<String, Map<String, String>> foo = null;
+	private Map<String, String> bar = null;
+	private Vehicle vehicle = null;
 	
 	@Before
 	public void setUp() throws Exception {		
@@ -47,10 +47,11 @@ public class ScopeTest {
 	@After 
 	public void tearDown() throws Exception {
 		if (Scope.vehicles != null) Scope.vehicles.clear();
+		if (collection != null) collection = null;
 	}
 
 	@Test
-	public void vehicleInitializationLengthTest() {
+	public void vehicleInitializationLength() {
 		Scope.initialize(collection);		
 		Assert.assertEquals(1, Scope.vehicles.size());		
 	}
@@ -69,7 +70,7 @@ public class ScopeTest {
 	}
 	
 	@Test 
-	public void getDumpableLengthTest() {
+	public void getDumpableLength() {
 		// bypass the initialization and add one vehicle
 		Scope.vehicles.add(vehicle);
 		ArrayList<Map<String, Map<String, String>>> c = Scope.getDumpable();		

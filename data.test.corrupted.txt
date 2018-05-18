@@ -1,0 +1,7 @@
+Train {
+	isArticulated: true;
+	isLowFloor: true;
+	nameOfTheProducer: ;
+	dateOfManufactureInMs: 1524334634587;
+	mileage: 99999;
+}
