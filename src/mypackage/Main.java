@@ -5,10 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
 
-import mypackage.Bus;
-import mypackage.Train;
-import mypackage.Vehicle;
-
 @SuppressWarnings("unused")
 public class Main {
 	

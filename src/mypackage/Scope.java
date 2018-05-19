@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import mypackage.Bus;
+import mypackage.Train;
+import mypackage.Vehicle;
+
 public class Scope {
 	
 	final static String MY_PACKAGE = "mypackage";
